@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="Map" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eDA-GX-vfn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3g-KN-c4y" customClass="RoundedButton" customModule="Map" customModuleProvider="target">
+                                <rect key="frame" x="321" y="613" width="44" height="44"/>
+                                <color key="backgroundColor" red="0.6037559325434203" green="0.81155460854274797" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="kM1-ha-IWy"/>
+                                    <constraint firstAttribute="width" constant="44" id="xWP-US-4JQ"/>
+                                </constraints>
+                                <state key="normal" image="GPS"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3km-6r-v0T" customClass="RoundedButton" customModule="Map" customModuleProvider="target">
+                                <rect key="frame" x="321" y="557" width="44" height="44"/>
+                                <color key="backgroundColor" red="0.60375593250000004" green="0.81155460850000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ENh-Ph-bby"/>
+                                    <constraint firstAttribute="width" constant="44" id="RRJ-cJ-pIU"/>
+                                </constraints>
+                                <state key="normal" image="Glass"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eDA-GX-vfn" secondAttribute="bottom" id="7WF-Dc-fdR"/>
+                            <constraint firstItem="eDA-GX-vfn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FhZ-3X-VVO"/>
+                            <constraint firstAttribute="trailing" secondItem="eDA-GX-vfn" secondAttribute="trailing" id="IhV-aK-pJb"/>
+                            <constraint firstItem="eDA-GX-vfn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="icx-Ap-M8k"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="H3g-KN-c4y" secondAttribute="bottom" constant="10" id="jXX-qG-XPB"/>
+                            <constraint firstItem="H3g-KN-c4y" firstAttribute="top" secondItem="3km-6r-v0T" secondAttribute="bottom" constant="12" id="mIw-CU-28l"/>
+                            <constraint firstItem="3km-6r-v0T" firstAttribute="trailing" secondItem="H3g-KN-c4y" secondAttribute="trailing" id="mhx-DM-Z4R"/>
+                            <constraint firstAttribute="trailing" secondItem="H3g-KN-c4y" secondAttribute="trailing" constant="10" id="whZ-0e-cPD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gpsButton" destination="H3g-KN-c4y" id="bua-cG-O2T"/>
+                        <outlet property="mapView" destination="eDA-GX-vfn" id="vqK-7P-IOP"/>
+                        <outlet property="searchButton" destination="3km-6r-v0T" id="8Ig-Ry-oCw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="GPS" width="20" height="20"/>
+        <image name="Glass" width="20" height="20"/>
+    </resources>
+</document>
